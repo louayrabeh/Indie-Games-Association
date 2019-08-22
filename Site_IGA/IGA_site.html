@@ -9,9 +9,21 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-  <link rel="icon" href="logo_iga.png" />
+  <link rel="icon" href="media/assets/logo_iga.png" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
   <title>INDIE GAMES ASSOCIATION</title>
   <style>
+    .part {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  width: 100px;
+  height:auto;
+}
+.part:hover{
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
     ::-webkit-scrollbar {
   width: 5px;
   height: 0px;
@@ -25,7 +37,7 @@
   background: transparent;
 }
     header{
-      background: url(Web1.png);
+      background: url(media/assets/Web1.png);
       background-size: cover;
       background-position: center;
       min-height: 800px;
@@ -33,6 +45,11 @@
     .cont1,.cont2{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    grid-gap: 1em;
+}
+.partner{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     grid-gap: 1em;
 }
 .event1color:hover{
@@ -46,10 +63,13 @@ opacity: 1;
       header{
         min-height: 500px;
       }
-      .cont1,.cont2
+      .cont1,.cont2,.carousel,.partner
       {
           display:block; 
         text-align: center;
+      }
+      .part{
+        margin: 10px;
       }
     }
     .section{
@@ -64,39 +84,49 @@ opacity: 1;
     }
   </style>
 </head>
-<body id="up" style="font-family:caviar dreams">
+<body id="up" style="font-family:Raleway,caviar dreams">
 
   <!-- navbar -->
   <header style="box-shadow:0px 2px 2px 1px #777;">
     <nav class="nav-wrapper transparent">
       <div class="container">
-        <a href="#" class="brand-logo center" style="margin-top: 1%"><img src="iga_logo_blanc.png" ></a>
+        <a href="#" class="brand-logo center" style="margin-top: 1%"><img src="media/assets/iga_logo_blanc.png" ></a>
         <a href="#" class="sidenav-trigger" data-target="mobile-menu">
           <i class="material-icons">menu</i>
         </a>
         <ul class="left hide-on-med-and-down">
             <li><a href="#">HOME</a></li>
+            <li><a href="#aboutus">ABOUT US</a></li>
             <li><a href="#news">NEWS</a></li>
-            <li><a href="#events">EVENTS</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
+            <li><a href="#events">EVENTS</a></li>
             <li><a href="#games">GAMES</a></li>
-            <li><a href="#aboutus">ABOUT US</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#partners">PARTNERS</a></li>
         </ul>
         <ul class="sidenav grey lighten-2" id="mobile-menu">
             <li><a href="#">HOME</a></li>
+            <li><a href="#aboutus">ABOUT US</a></li>
             <li><a href="#news">NEWS</a></li>
             <li><a href="#events">EVENTS</a></li>
             <li><a href="#games">GAMES</a></li>
-            <li><a href="#aboutus">ABOUT US</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#partners">PARTNERS</a></li>
         </ul>
       </div>
     </nav>
     <div class="flow-text center home-text"style="color:#fff;font-family:caviar dreams">
-        <img src="mario.png" alt="">
+        <img class="mario responsive-img" src="media/assets/mario.png" alt="">
   </header>
+  <section class="container section scrollspy" id="aboutus">
+    <div class="row center">
+      <h2 class="red-text text-darken-3 center">ABOUT US</h2>
+      Indie Games Association is a non profit organisation, 
+      founded by a group of young and motivated developers and 
+      students and which focuses on the games industry in Tunisia,
+       uniting the game development community in collaboration 
+      with local game dev studios and tend to spread its culture in the student life through several clubs and institutes such as ISAMM and ESSTED.
+    </div>
+  </section>
   <section class="container section scrollspy" id="news">
     <div class="row">
                       <h2 class="red-text text-darken-3 center">NEWS</h2>
@@ -111,9 +141,11 @@ opacity: 1;
                                <span class=" card-content">
                                   <b class="left title red-text text-darken-3">Game Dev Workshops</b><br>
                                   <b class="left title ">First Meeting in our new working space</b> <br> <br>
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto voluptates officia 
-                                ab rerum amet facilis eveniet voluptatem veniam dolorum maiores sunt dignissimos, porro 
-                                asperiores minima quas, excepturi nostrum dolor ea!</span><br><br>
+                                  IGA has started it's annual Game Dev Workshops in the valkyrie entertainment co-working space.<br>
+                                  We discussed every member's first game idea,
+                                  talked about the first steps in editing a GDD(Game Design Document) and creating a game,
+                                  including the phases of rendering, programming, producing and testing.
+                                </span><br><br>
                             </span>
                             <span class="card event truncate hoverable">
                                     <a class="waves-effect waves-light modal-trigger" href="#modalcata2">
@@ -124,9 +156,14 @@ opacity: 1;
                                         <span class=" card-content">
                                             <b class="left title red-text text-darken-3">Clash:Mutants VS Pirates</b><br>
                                             <b class="left title ">Saturday 02 March Pre-beta testing session</b><br> <br>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto voluptates officia 
-                                    ab rerum amet facilis eveniet voluptatem veniam dolorum maiores sunt dignissimos, porro 
-                                    asperiores minima quas, excepturi nostrum dolor ea!</span><br><br>
+                                            Indie Games Association's media team and developers were invited saturday, march 02 for NewGen's Clash:Mutants VS Pirates pre-beta testing
+                                            in the city of culture. <br>
+                                            IGA team took part in the testing of the game's mechanics and graphics plus its quality control. Our testers helped NewGen's team 
+                                            in detecting and reporting defects within the game in order to help improve the product.
+                                            As for the media coverage, our team was represented by our talented photographers, who captured the highlights of the event to help 
+                                            promote, proudly, this unusual tunisian product.
+                                            Multiple well-known personalities in the industry attended the event to support the studio and wish them success in their future projects.
+                                  </span><br><br>
                                 </span>
                                 <span class="card event truncate hoverable" style="text-align:center">
                                         <a class="waves-effect waves-light modal-trigger" href="#modalcata3">
@@ -137,22 +174,23 @@ opacity: 1;
                                             <span class=" card-content">
                                                 <b class="left title red-text text-darken-3">You want to join the team ?</b><br>
                                                 <b class="left title ">We are recruiting a new community manager</b><br> <br>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto voluptates officia 
-                                ab rerum amet facilis eveniet voluptatem veniam dolorum maiores sunt dignissimos, porro 
-                                asperiores minima quas, excepturi nostrum dolor ea!</span><br><br>
+                                                Are you passionate about the web, communications and social media ?
+                                                You are creative and you like the challenge ?
+                                                So what are you waiting for to join us ? <br>Form: <u class="red-text text-darken-3">https://forms.gle/ewnF7JSXkGEVS8D17</u></h6></span><br><br>
                             </span>
                             <span class="card event truncate hoverable" style="text-align:center">
                                     <a class="waves-effect waves-light modal-trigger" href="#modalcata4">
                                             <div class="color" style="background-color: #ED6C2B;height: 100%;opacity: 0;
                                             width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
-                                            <img src="manouba4.0.jpg" alt="" style="cursor:grab;height:150px;width:100%">
+                                            <img src="media/news/manouba4.0.jpg" alt="" style="cursor:grab;height:150px;width:100%">
                                         </a>
                                         <span class=" card-content">
                                             <b class="left title red-text text-darken-3">Le patrimoine à l'honneur</b><br>
                                             <b class="left title ">Our first partnership with 4C Manouba</b><br> <br>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto voluptates officia 
-                                    ab rerum amet facilis eveniet voluptatem veniam dolorum maiores sunt dignissimos, porro 
-                                    asperiores minima quas, excepturi nostrum dolor ea!</span><br><br>
+                                            Manouba 4.0, Le patrimoine de l'honneur was an opportunity for our association to take part in such educational event and start a new partnership 
+                                            with ISAMM's 4C Club and Ticdce. <br> The event took place in ISAMM's amphitheater and Ticdce's headquaters in the city of culture. Manouba 4.0's activities were 
+                                            categorized into workshops, challenges and conferences, in which the attendants participated in discussions about the alliance between the authentic history of the 
+                                            the region of Manouba and the digital world. This event offers you the opportunity to discover the Tunisian heritage and take part in the challenge.</span><br><br>
                                 </span>
                                 <span class="card event truncate hoverable" style="text-align:center">
                                         <a class="waves-effect waves-light modal-trigger" href="#modalcata5">
@@ -163,9 +201,11 @@ opacity: 1;
                                             <span class=" card-content">
                                                 <b class="left title red-text text-darken-3">Indie Games Club</b><br>
                                                 <b class="left title ">Opening of the new club in Essted</b><br> <br>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto voluptates officia 
-                                        ab rerum amet facilis eveniet voluptatem veniam dolorum maiores sunt dignissimos, porro 
-                                        asperiores minima quas, excepturi nostrum dolor ea!</span><br><br>
+                                                In part of the development of the association and getting involved in the student life, Indie Games 
+                                                Association opened an Indie Games Club in ESSTED in order to facilitate the organization of training sessions
+                                                and Game Dev related events within the school.<br>And by this opening, IGA tend to be more known among the students, to recruit the most brilliant 
+                                                artists and to unite the video games community in the campus by spreading the culture on a larger scale.
+                                      </span><br><br>
                                     </span>
                                     <span class="card event truncate hoverable" style="text-align:center">
                                             <a class="waves-effect waves-light modal-trigger" href="#modalcata6">
@@ -175,10 +215,13 @@ opacity: 1;
                                                 </a>
                                                 <span class=" card-content">
                                                     <b class="left title red-text text-darken-3">Radiocean about IGA</b><br>
-                                                    <b class="left title ">"We do not stop playing for the rest of our lives"</b><br> <br>
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto voluptates officia 
-                                    ab rerum amet facilis eveniet voluptatem veniam dolorum maiores sunt dignissimos, porro 
-                                    asperiores minima quas, excepturi nostrum dolor ea!</span><br><br>
+                                                    <b class="left title ">We do not stop playing for the rest of our lives</b><br> <br>
+                                                    Friday, july 20th we did an interview with Radiocean in which we talked about how much we love video 
+                                                    games and how much we love creating them.Also, we talked about our own events and the ones we participated 
+                                                    in like Tunisia talks games, Global Game Jam and ComicCon Tunisia and how we should invest more in the games 
+                                                    industry in Tunisia.We discussed the goals of our association which are 
+                                                    the development of the video game industry as well as the training of students in this domain within the walls of the university.
+        </span><br><br>
                                 </span>
                 </div>
     </div>
@@ -186,107 +229,67 @@ opacity: 1;
 
   <section class="container section scrollspy" id="events">
     <div class="row center">
-                      <h2 class="red-text text-darken-3 center">EVENTS</h2>
-                      <div class="cont1">
-                        <span class="card event event1" style="text-align:center" >
-                                <a class="waves-effect waves-light" href="">
-                                        <div class="eventcolor" style="background-color: #FBD115;height: 100%;
-                                        width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
-                                        <img src="https://media.wired.com/photos/598e35994ab8482c0d6946e0/master/w_799,c_limit/phonepicutres-TA.jpg" alt="" style="cursor:grab;height:150px;width:100%">
-                                        </a>
-                                <button class="btn" style="width:100%;background-color: #FBD115">GLOBAL GAME JAM 2019</button>
-                            </span>
-                            <span class="card event" style="text-align:center">
-                                    <a class="waves-effect waves-light " href="">
-                                            <div class="eventcolor" style="background-color: #ED6C2B;height: 100%;
-                                            width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
-                                            <img src="https://media.wired.com/photos/598e35994ab8482c0d6946e0/master/w_799,c_limit/phonepicutres-TA.jpg" alt="" style="cursor:grab;height:150px;width:100%">
-                                        </a>
-                                        <button class="btn" style="width:100%;background-color: #ED6C2B">COMIC CON 2018</button>
-                                </span>
-                                <span class="card event" style="text-align:center">
-                                        <a class="waves-effect waves-light " href="">
-                                                <div class="eventcolor" style="background-color: #52B950;height: 100%;
-                                                width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
-                                                <img src="https://media.wired.com/photos/598e35994ab8482c0d6946e0/master/w_799,c_limit/phonepicutres-TA.jpg" alt="" style="cursor:grab;height:150px;width:100%">
-                                            </a>
-                                            <button class="btn" style="width:100%;background-color: #52B950">LEVEL UP ISAMM</button>
-                            </span>
-                            <span class="card event" style="text-align:center">
-                                    <a class="waves-effect waves-light " href="">
-                                            <div class="eventcolor" style="background-color: #27BABB;height: 100%;
-                                            width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
-                                            <img src="https://media.wired.com/photos/598e35994ab8482c0d6946e0/master/w_799,c_limit/phonepicutres-TA.jpg" alt="" style="cursor:grab;height:150px;width:100%">
-                                        </a>
-                                    <button class="btn" style="width:100%;background-color: #27BABB">GEEK LAND</button>
-                                </span>
-                                <span class="card event" style="text-align:center">
-                                        <a class="waves-effect waves-light" href="">
-                                                <div class="eventcolor" style="background-color: #A44C9D;height: 100%;
-                                                width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
-                                                <img src="https://media.wired.com/photos/598e35994ab8482c0d6946e0/master/w_799,c_limit/phonepicutres-TA.jpg" alt="" style="cursor:grab;height:150px;width:100%">
-                                            </a>
-                                            <button class="btn" style="width:100%;background-color: #A44C9D">COMIC CON 2017</button>
-                                    </span>
-                                    <span class="card event" style="text-align:center">
-                                            <a class="waves-effect waves-light" href="">
-                                                    <div class="eventcolor" style="background-color: #264A9D;height: 100%;
-                                                    width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
-                                                    <img src="https://media.wired.com/photos/598e35994ab8482c0d6946e0/master/w_799,c_limit/phonepicutres-TA.jpg" alt="" style="cursor:grab;height:150px;width:100%">
-                                                </a>
-                                                <button class="btn" style="width:100%;background-color: #264A9D">TUNISIA TALKS GAMES</button>
-                                </span>
-                </div>
-                <div class="cont2" style="display: none">
-                  <span class="card event event1" style="text-align:center" >
-                          <a class="waves-effect waves-light " href="">
-                                  <div class="eventcolor" style="background-color: #FBD115;height: 100%;
-                                  width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
-                                  <img src="https://media.wired.com/photos/598e35994ab8482c0d6946e0/master/w_799,c_limit/phonepicutres-TA.jpg" alt="" style="cursor:grab;height:150px;width:100%">
-                                  </a>
-                          <button class="btn" style="width:100%;background-color: #FBD115">GLOBAL GAME JAM 2019</button>
-                      </span>
-                      <span class="card event" style="text-align:center">
-                              <a class="waves-effect waves-light " href="">
-                                      <div class="eventcolor" style="background-color: #ED6C2B;height: 100%;
-                                      width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
-                                      <img src="https://media.wired.com/photos/598e35994ab8482c0d6946e0/master/w_799,c_limit/phonepicutres-TA.jpg" alt="" style="cursor:grab;height:150px;width:100%">
-                                  </a>
-                                  <button class="btn" style="width:100%;background-color: #ED6C2B">COMIC CON 2018</button>
-                          </span>
-                          <span class="card event" style="text-align:center">
-                                  <a class="waves-effect waves-light " href="">
-                                          <div class="eventcolor" style="background-color: #52B950;height: 100%;
-                                          width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
-                                          <img src="https://media.wired.com/photos/598e35994ab8482c0d6946e0/master/w_799,c_limit/phonepicutres-TA.jpg" alt="" style="cursor:grab;height:150px;width:100%">
-                                      </a>
-                                      <button class="btn" style="width:100%;background-color: #52B950">LEVEL UP ISAMM</button>
-                      </span>
-                      <span class="card event" style="text-align:center">
-                              <a class="waves-effect waves-light " href="">
-                                      <div class="eventcolor" style="background-color: #27BABB;height: 100%;
-                                      width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
-                                      <img src="https://media.wired.com/photos/598e35994ab8482c0d6946e0/master/w_799,c_limit/phonepicutres-TA.jpg" alt="" style="cursor:grab;height:150px;width:100%">
-                                  </a>
-                              <button class="btn" style="width:100%;background-color: #27BABB">GEEK LAND</button>
-                          </span>
-                          <span class="card event" style="text-align:center">
-                                  <a class="waves-effect waves-light" href="">
-                                          <div class="eventcolor" style="background-color: #A44C9D;height: 100%;
-                                          width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
-                                          <img src="https://media.wired.com/photos/598e35994ab8482c0d6946e0/master/w_799,c_limit/phonepicutres-TA.jpg" alt="" style="cursor:grab;height:150px;width:100%">
-                                      </a>
-                                      <button class="btn" style="width:100%;background-color: #A44C9D">COMIC CON 2017</button>
-                              </span>
-                              <span class="card event" style="text-align:center">
-                                      <a class="waves-effect waves-light" href="">
-                                              <div class="eventcolor" style="background-color: #264A9D;height: 100%;
-                                              width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
-                                              <img src="https://media.wired.com/photos/598e35994ab8482c0d6946e0/master/w_799,c_limit/phonepicutres-TA.jpg" alt="" style="cursor:grab;height:150px;width:100%">
-                                          </a>
-                                          <button class="btn" style="width:100%;background-color: #264A9D">TUNISIA TALKS GAMES</button>
-                          </span>
-          </div>
+            <h2 class="red-text text-darken-3 center">EVENTS</h2>
+            <div class="cont1">
+              <span class="card event event1" style="text-align:center" >
+                  <a class="waves-effect waves-light" href="globalgamejam2019.html">
+                          <div class="eventcolor" style="background-color: #FBD115;height: 100%;
+                          width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center " style="font-size: 30px"><b>READ ABOUT</b></div></div>
+                          <img src="media/GGJ19/affiche_ggj19.jpg" alt="" style="cursor:grab;height:150px;width:100%">
+                          </a>
+                  <button class="btn" style="width:100%;background-color: #FBD115">GLOBAL GAME JAM 2019</button>
+              </span>
+              <span class="card event" style="text-align:center">
+                  <a class="waves-effect waves-light " href="cctun18.html">
+                          <div class="eventcolor" style="background-color: #ED6C2B;height: 100%;
+                          width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
+                          <img src="media/cctun18/affiche_cctun18.jpg" alt="" style="cursor:grab;height:150px;width:100%">
+                      </a>
+                      <button class="btn" style="width:100%;background-color: #ED6C2B">COMIC CON 2018</button>
+              </span>
+              <span class="card event" style="text-align:center">
+                    <a class="waves-effect waves-light " href="level_up.html">
+                        <div class="eventcolor" style="background-color: #52B950;height: 100%;
+                        width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
+                        <img src="media/LevelUp_ISAMM/7.JPG" alt="" style="cursor:grab;height:150px;width:100%">
+                    </a>
+                    <button class="btn" style="width:100%;background-color: #52B950">LEVEL UP ISAMM</button>
+              </span>
+              <span class="card event" style="text-align:center">
+                  <a class="waves-effect waves-light " href="geek_land.html">
+                          <div class="eventcolor" style="background-color: #27BABB;height: 100%;
+                          width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
+                          <img src="media/geekland17/7.JPG" alt="" style="cursor:grab;height:150px;width:100%">
+                      </a>
+                  <button class="btn" style="width:100%;background-color: #27BABB">GEEK LAND</button>
+              </span>
+              <span class="card event" style="text-align:center">
+                  <a class="waves-effect waves-light" href="cctun17.html">
+                          <div class="eventcolor" style="background-color: #A44C9D;height: 100%;
+                          width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
+                          <img src="media/cctun17/10.jpg" alt="" style="cursor:grab;height:150px;width:100%">
+                      </a>
+                      <button class="btn" style="width:100%;background-color: #A44C9D">COMIC CON 2017</button>
+              </span>
+              <span class="card event" style="text-align:center">
+                <a class="waves-effect waves-light" href="tunisia_talks_games.html">
+                    <div class="eventcolor" style="background-color: #264A9D;height: 100%;
+                    width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
+                    <img src="media/Tunisia_Talks_Games/7.jpg" alt="" style="cursor:grab;height:150px;width:100%">
+                </a>
+                <button class="btn" style="width:100%;background-color: #264A9D">TUNISIA TALKS GAMES</button>
+              </span>
+      </div>
+      <div class="cont2" style="display: none">
+        <span class="card event event1" style="text-align:center" >
+                <a class="waves-effect waves-light " href="lanci_rouhek.html">
+                        <div class="eventcolor" style="background-color: #FBD115;height: 100%;
+                        width: 100%;position: absolute;z-index: 9;overflow: hidden;transform: translateY(0px);color: white;opacity: 0;"><div class="center" style="font-size: 30px"><b>READ ABOUT</b></div></div>
+                        <img src="media/Lanci-Rouhek17/1.jpg" alt="" style="cursor:grab;height:150px;width:100%">
+                        </a>
+                <button class="btn" style="width:100%;background-color: #FBD115">Lanci Rouhek 2017</button>
+            </span>
+</div>
                 <button id="seemore" class="seemore btn" style=" background-color: #ccc;color: black">See more</button>
                 <a href="#events"><button class="showless btn" style=" background-color: #ccc;color: black;display: none">Show less</button></a>
     </div>
@@ -295,85 +298,113 @@ opacity: 1;
     <div class="row carousel">
         <div class="col s12 l8 offset-l1">
             <h3 class="red-text text-darken-3">DISCOVER OUR GAMES</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+            Take a look at the indie games developped, by our young and ambitous developers, within our association.</p>
         </div>
         <div class="carousel">
-            <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
-            <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
-            <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
-            <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
-            <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
-          </div>
+            <a class="carousel-item" href="#one!"><img src="media/games/attack_on_titan.jpg"></a>
+            <a class="carousel-item" href="#two!"><img src="media/games/blasa_tounes.jpg"></a>
+            <a class="carousel-item" href="#three!"><img src="media/games/gamberGo.jpg"></a>
+        </div>
     </div>
+</section>
+<section class="container section scrollspy" id="partners">
+  <div class="row center">
+    <h2 class="red-text text-darken-3 center">PARTNERS</h2>
+    <div class="partner valign-wrapper">
+      <div><img class="part" src="media/partners/GGJ.png"></div>
+      <div><img class="part" src="media/partners/isamm.png"></div>
+      <div><img class="part" src="media/partners/logo_essted.png"></div>
+      <div><img class="part" src="media/partners/logo_galactech.png"></div>
+      <div><img class="part" src="media/partners/IGC_ISAMM.png"></div>
+      <div><img class="part" src="media/partners/IGC_ESSTED.png"></div>
+      <div><img class="part" src="media/partners/club_photo.png"></div>
+      <div><img class="part" src="media/partners/logo-CRIM.jpg"></div>
+      <div><img class="part" src="media/partners/logo_enactusISAMM.jpg"></div>
+      <div><img class="part" src="media/partners/logoCC.png"></div>
+      <div><img class="part" src="media/partners/joker.jpg"></div>
+      <div><img class="part" src="media/partners/isammevents.jpg"></div>
+      <div><img class="part" src="media/partners/logo_sfbt.png"></div>
+      <div><img class="part" src="media/partners/Logo-Céréalis.jpg"></div>
+    </div>
+      </div>
 </section>
 <div id="modalcata1" class="modal">
   <h4 class="center red-text text-darken-3">Game Dev Workshops</h4>
   <h6 style="margin: 20px;" class="left description">
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio minima eius quos, adipisci quo,
-     doloribus excepturi consequuntur et molestias dolores est voluptates cumque! Eveniet nostrum amet cupiditate optio
-      saepe numquam.</h6>
+    &emsp;IGA has started it's annual Game Dev Workshops in the valkyrie entertainment co-working space.<br>We discussed every member's first game idea,
+    talked about the first steps in editing a GDD(Game Design Document) and creating a game, including the phases of rendering, programming, producing and testing.</h6>
  <div class="center pic">
-   <img src="https://scontent.ftun2-1.fna.fbcdn.net/v/t1.0-9/58551660_2255169928134880_6108212672015106048_o.jpg?_nc_cat=101&_nc_oc=AQmTwjhwCMIVroYA5YMWv2FtpMv6LvwuuMR4DH20C0wDN_piLhfpwWWpHd49KL8Y8r8&_nc_ht=scontent.ftun2-1.fna&oh=2ab93e049e157ff7a706c3d7d07799ab&oe=5DC4F7B9" alt="" style="height:auto;width:100%">
+   <img src="https://scontent.ftun2-1.fna.fbcdn.net/v/t1.0-9/58551660_2255169928134880_6108212672015106048_o.jpg?_nc_cat=101&_nc_oc=AQmTwjhwCMIVroYA5YMWv2FtpMv6LvwuuMR4DH20C0wDN_piLhfpwWWpHd49KL8Y8r8&_nc_ht=scontent.ftun2-1.fna&oh=2ab93e049e157ff7a706c3d7d07799ab&oe=5DC4F7B9" alt="" style="height:auto;width:80%">
  </div>
 </div>
   <div id="modalcata2" class="modal">
       <h4 class="center red-text text-darken-3">Clash:Mutants VS Pirates</h4>
       <h6 style="margin: 20px;" class="left description">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio minima eius quos, adipisci quo,
-         doloribus excepturi consequuntur et molestias dolores est voluptates cumque! Eveniet nostrum amet cupiditate optio
-          saepe numquam.</h6>
+        &emsp;Indie Games Association's media team and developers were invited saturday, march 02 for NewGen's Clash:Mutants VS Pirates pre-beta testing
+        in the city of culture. <br>
+        &emsp;IGA team took part in the testing of the game's mechanics and graphics plus its quality control. Our testers helped NewGen's team 
+        in detecting and reporting defects within the game in order to help improve the product.<br>
+        As for the media coverage, our team was represented by our talented photographers, who captured the highlights of the event to help 
+        promote, proudly, this unusual tunisian product.<br>
+        &emsp;Multiple well-known personalities in the industry attended the event to support the studio and wish them success in their future projects.</h6>
      <div class="center pic">
-    <img src="https://steamcdn-a.akamaihd.net/steam/apps/822710/header.jpg?t=1561973493" alt="" style="height:auto;width:100%"></div>
+    <img src="https://steamcdn-a.akamaihd.net/steam/apps/822710/header.jpg?t=1561973493" alt="" style="height:auto;width:80%"></div>
   </div>
     <div id="modalcata3" class="modal">
         <h4 class="center red-text text-darken-3">You want to join the team ?</h4>
         <h6 style="margin: 20px;" class="left description">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio minima eius quos, adipisci quo,
-           doloribus excepturi consequuntur et molestias dolores est voluptates cumque! Eveniet nostrum amet cupiditate optio
-            saepe numquam.</h6>
+          Are you passionate about the web, communications and social media ? <br>
+          You are creative and you like the challenge ?<br> 
+          So what are you waiting for to join us ? <br>Form: <a href="https://forms.gle/ewnF7JSXkGEVS8D17" target="_blank">https://forms.gle/ewnF7JSXkGEVS8D17</a></h6>
        <div class="center pic">
-    <img src="https://scontent.ftun2-1.fna.fbcdn.net/v/t1.0-9/57024127_2247441405574399_7270919628245696512_n.jpg?_nc_cat=102&_nc_oc=AQmUkGj6EDySyVPjgPiTnC0FpJLgXWa63t3DURrS2Xw6fHwQVimxwMDpINunLPmShEE&_nc_ht=scontent.ftun2-1.fna&oh=bf2d41e341344bf0e721827f588db93b&oe=5DBA2873" alt="" style="height:auto;width:100%"></div>
+    <img src="https://scontent.ftun2-1.fna.fbcdn.net/v/t1.0-9/57024127_2247441405574399_7270919628245696512_n.jpg?_nc_cat=102&_nc_oc=AQmUkGj6EDySyVPjgPiTnC0FpJLgXWa63t3DURrS2Xw6fHwQVimxwMDpINunLPmShEE&_nc_ht=scontent.ftun2-1.fna&oh=bf2d41e341344bf0e721827f588db93b&oe=5DBA2873" alt="" style="height:auto;width:80%"></div>
   </div>
     <div id="modalcata4" class="modal">
         <h4 class="center red-text text-darken-3">Le patrimoine à l'honneur</h4>
         <h6 style="margin: 20px;" class="left description">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio minima eius quos, adipisci quo,
-           doloribus excepturi consequuntur et molestias dolores est voluptates cumque! Eveniet nostrum amet cupiditate optio
-            saepe numquam.</h6>
+          &emsp;Manouba 4.0, Le patrimoine de l'honneur was an opportunity for our association to take part in such educational event and start a new partnership 
+          with ISAMM's 4C Club and Ticdce. <br> &emsp;The event took place in ISAMM's amphitheater and Ticdce's headquaters in the city of culture. <br>Manouba 4.0's activities were 
+          categorized into workshops, challenges and conferences, in which the attendants participated in discussions about the alliance between the authentic history of the 
+          the region of Manouba and the digital world. This event offers you the opportunity to discover the Tunisian heritage and take part in the challenge.
+        </h6>
        <div class="center pic">
-    <img src="manouba4.0.jpg" alt="" style="height:auto;width:100%"></div>
+    <img src="media/news/manouba4.0.jpg" alt="" style="height:auto;width:80%"></div>
   </div>
     <div id="modalcata5" class="modal">
         <h4 class="center red-text text-darken-3">Indie Games Club</h4>
         <h6 style="margin: 20px;" class="left description">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio minima eius quos, adipisci quo,
-           doloribus excepturi consequuntur et molestias dolores est voluptates cumque! Eveniet nostrum amet cupiditate optio
-            saepe numquam.</h6>
+          &emsp;In part of the development of the association and getting involved in the student life, Indie Games 
+          Association opened an Indie Games Club in ESSTED in order to facilitate the organization of training sessions
+           and Game Dev related events within the school.<br>And by this opening, IGA tend to be more known among the students, to recruit the most brilliant 
+           artists and to unite the video games community in the campus by spreading the culture on a larger scale.</h6>
        <div class="center pic">
-    <img src="https://scontent.ftun2-1.fna.fbcdn.net/v/t1.0-9/52592490_2096217254003584_6061297133628162048_n.jpg?_nc_cat=105&_nc_oc=AQl9Lr0mwMdsq3Fxp0LhcSWm6_462rc3CLC3Pman_jbBvZhIlhqDbVQphsrESwh6xVU&_nc_ht=scontent.ftun2-1.fna&oh=6cdc97aa77797caff0cc35dcc2f591eb&oe=5D7DA236" alt="" style="height:auto;width:100%"></div>
+    <img src="https://scontent.ftun2-1.fna.fbcdn.net/v/t1.0-9/52592490_2096217254003584_6061297133628162048_n.jpg?_nc_cat=105&_nc_oc=AQl9Lr0mwMdsq3Fxp0LhcSWm6_462rc3CLC3Pman_jbBvZhIlhqDbVQphsrESwh6xVU&_nc_ht=scontent.ftun2-1.fna&oh=6cdc97aa77797caff0cc35dcc2f591eb&oe=5D7DA236" alt="" style="height:auto;width:80%"></div>
   </div>
     <div id="modalcata6" class="modal">
         <h4 class="center red-text text-darken-3">Radiocean about IGA</h4>
         <h6 style="margin: 20px;" class="left description">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio minima eius quos, adipisci quo,
-           doloribus excepturi consequuntur et molestias dolores est voluptates cumque! Eveniet nostrum amet cupiditate optio
-            saepe numquam.</h6>
+          &emsp;Friday, july 20th we did an interview with Radiocean in which we talked about how much we love video 
+          games and how much we love creating them.<br>Also, we talked about our own events and the ones we participated 
+          in like Tunisia talks games, Global Game Jam and ComicCon Tunisia and how we should invest more in the games 
+          industry in Tunisia.<br>&emsp;We discussed the goals of our association which are 
+          the development of the video game industry as well as the training of students in this domain within the walls of the university.
+        </h6>
        <div class="center pic">
-    <img src="https://scontent.ftun2-1.fna.fbcdn.net/v/t1.0-9/36578996_2034093190242556_8302816144226516992_n.jpg?_nc_cat=103&_nc_oc=AQktnCdpwKEmPpWhtBIionSM76bwao1Hnf-5sMgvQup20XySq1fVQxITUF8VpN8h40o&_nc_ht=scontent.ftun2-1.fna&oh=f0e704c8fb0baf4bbb3cb8baa5f3e259&oe=5DC62DBC" alt="" style="height:auto;width:100%"></div>
+    <img src="https://scontent.ftun2-1.fna.fbcdn.net/v/t1.0-9/36578996_2034093190242556_8302816144226516992_n.jpg?_nc_cat=103&_nc_oc=AQktnCdpwKEmPpWhtBIionSM76bwao1Hnf-5sMgvQup20XySq1fVQxITUF8VpN8h40o&_nc_ht=scontent.ftun2-1.fna&oh=f0e704c8fb0baf4bbb3cb8baa5f3e259&oe=5DC62DBC" alt="" style="height:auto;width:80%"></div>
   </div>
     <footer class="page-footer" style="background-color: #DD3627">
         <div class="container">
           <div class="row" style="margin-bottom: 20px;">
             <div class="col l6 s12 left">
-                <a href="#" class="white-text"><img style="margin-right: 20px" src="snapchat.png" alt="SNAPCHAT"></a>
-                <a href="#" class="white-text"><img style="margin-right: 20px" src="whatsapp.png" alt="WHATSAPP"></a>
-                <a href="https://www.youtube.com/channel/UCR-T62OhnYHekdd9vp5vzag" class="white-text"><img style="margin-right: 20px" src="youtube.png" alt="YOUTUBE"></a>
-               <a href="https://twitter.com/IndieGamesAsso1" class="white-text"><img style="margin-right: 20px" src="twitter.png" alt="TWITTER"></a>
-                <a href="https://www.facebook.com/IndieGamesAssociation" class="white-text"><img style="margin-right: 20px" src="facebook.png" alt="FACEBOOK"></a>
-                <a href="https://www.instagram.com/indiegamesassociation/" class="white-text"><img style="margin-right: 20px" src="instagram.png" alt="INSTAGRAM"></a>
+                <a href="#" class="white-text"><img style="margin-right: 20px" src="media/assets/snapchat.png" alt="SNAPCHAT"></a>
+                <a href="#" class="white-text"><img style="margin-right: 20px" src="media/assets/whatsapp.png" alt="WHATSAPP"></a>
+                <a href="https://www.youtube.com/channel/UCR-T62OhnYHekdd9vp5vzag" class="white-text"><img style="margin-right: 20px" src="media/assets/youtube.png" alt="YOUTUBE"></a>
+               <a href="https://twitter.com/IndieGamesAsso1" class="white-text"><img style="margin-right: 20px" src="media/assets/twitter.png" alt="TWITTER"></a>
+                <a href="https://www.facebook.com/IndieGamesAssociation" class="white-text"><img style="margin-right: 20px" src="media/assets/facebook.png" alt="FACEBOOK"></a>
+                <a href="https://www.instagram.com/indiegamesassociation/" class="white-text"><img style="margin-right: 20px" src="media/assets/instagram.png" alt="INSTAGRAM"></a>
             </div>
             <div class="right">
-                <a href="#up"><img style="margin-right: 20px" src="up.png" alt="up"></a>
+                <a href="#up"><img style="margin-right: 20px" src="media/assets/up.png" alt="up"></a>
             </div>
           </div>
           <div class="row">
@@ -392,7 +423,7 @@ opacity: 1;
           </div>
           <hr>
           2019, Indie Games Association Tunisia <br>
-          Copyright © Designed by Abir Dakhli, All rights reserved 2019<br><br>
+          Copyright © INDIE GAMES ASSOCIATION, All rights reserved 2019<br><br>
         </div>
         <div class="footer-copyright">
           <div class="container">
